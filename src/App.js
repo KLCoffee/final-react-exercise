@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import {useContext, useState} from 'react';
+import MCUShows from "./mcu-shows/MCUShows";
+
+const releaseDates = {
+  wandaVision: 'January 2021',
+  falconWinter: 'March 2021',
+  loki: 'June 2021',
+  whatIf: 'August 2021',
+  hawkeye: 'November 2021'
+};
+
+const mcuCharacters = [
+  'Scarlet Witch',
+  'Vision',
+  'Falcon',
+  'Winter Soldier',
+  'Loki',
+  'The Watcher',
+  'Hawkeye'
+ ];
 
 function App() {
+//   useState [index, setIndex] = useState(0);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>FINAL REACT EXERCISE</h1>
+      <MCUShows dates={releaseDates} />
+      <h1>Random MCU Character:</h1>
     </div>
   );
 }
